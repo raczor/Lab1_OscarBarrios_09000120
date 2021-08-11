@@ -15,5 +15,5 @@ void bitToggle(uint32_t *ptr, uint8_t bit) {
 }
 
 uint8_t stringLength(uint8_t *str) {
-	return sizeof(str);
+	return (uint8_t)strlen((char *)str);
 }

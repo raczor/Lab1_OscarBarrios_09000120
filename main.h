@@ -8,6 +8,6 @@ void mainBitClear(void);
 
 void mainBitToggle(void);
 
-void mainStringLength(void);
+void mainStringLength(uint8_t *test);
 
 void printBits(uint32_t number);

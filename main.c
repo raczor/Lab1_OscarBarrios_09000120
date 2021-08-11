@@ -7,7 +7,10 @@ int main() {
 	
 	mainBitToggle();
 	
-	mainStringLength();
+	mainStringLength((uint8_t *)"Testing");
+	mainStringLength((uint8_t *)"10");
+	mainStringLength((uint8_t *)"Testing 100");
+	mainStringLength((uint8_t *)"");
 }
 
 void mainBitTest() {
@@ -71,19 +74,11 @@ void mainBitToggle() {
 	printf("\n\n");
 }
 
-void mainStringLength() {
-	uint8_t number = 11;
-	
+void mainStringLength(uint8_t *word) {
 	printf("-------------- stringLength --------------\n");
-	uint8_t numberLength = stringLength(&number);
+	uint8_t numberLength = stringLength(word);
 	
-	printf("number: %d, string length: %d\n", number, numberLength);
-	
-	printf("number: "); 
-	printBits(number); 
-	printf(", string length: ");
-	printBits(numberLength);
-	printf("\n\n");
+	printf("word: '%s', string length: %d\n\n", word, numberLength);
 }
 
 void printBits(uint32_t n) {
